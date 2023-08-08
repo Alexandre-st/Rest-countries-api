@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import Country from "./Country";
 
 const BASE_URL = "https://restcountries.com/v3.1/all";
 
 interface CountryType {
   flag: string;
-  name: string;
+  population: number;
+  capital: string;
   common: string;
   region: string;
   capitals: string;
@@ -30,9 +32,11 @@ const Countries: React.FC = () => {
   return (
     <>
       <h1>Countries</h1>
-      {countries.map((country) => (
-        <p>{country.region}</p>
-      ))}
+      <section>
+        {countries.map((country, index) => (
+          <Country key={index} country={country} />
+        ))}
+      </section>
     </>
   );
 };
