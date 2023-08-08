@@ -4,12 +4,15 @@ import Country from "./Country";
 const BASE_URL = "https://restcountries.com/v3.1/all";
 
 interface CountryType {
-  flag: string;
-  population: number;
-  capital: string;
-  common: string;
   region: string;
-  capitals: string;
+  capital: string;
+  population: number;
+  name: {
+    common: string;
+  };
+  flags: {
+    svg: string;
+  };
 }
 
 const Countries: React.FC = () => {
