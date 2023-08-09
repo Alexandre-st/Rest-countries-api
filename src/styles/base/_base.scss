@@ -1,0 +1,9 @@
+:root {
+  font-size: 10px;
+}
+
+.container {
+  color: var(--text-color);
+  width: min(100% - 3.2rem, 96.9rem);
+  margin-inline: auto;
+}

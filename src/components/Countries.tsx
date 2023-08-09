@@ -34,8 +34,7 @@ const Countries: React.FC = () => {
 
   return (
     <>
-      <h1>Countries</h1>
-      <section>
+      <section className="country-container container">
         {countries.map((country, index) => (
           <Country key={index} country={country} />
         ))}
