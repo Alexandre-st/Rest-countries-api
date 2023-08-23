@@ -9,6 +9,7 @@ interface CountryType {
   population: number;
   name: {
     common: string;
+    official: string;
   };
   flags: {
     svg: string;
@@ -33,13 +34,13 @@ const Countries: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <section className="country-container container">
+    <section className="country container">
+      <div className="country-container">
         {countries.map((country, index) => (
           <Country key={index} country={country} />
         ))}
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

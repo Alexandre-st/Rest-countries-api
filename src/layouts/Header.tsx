@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import emptyMoon from "../assets/empty-moon.png";
+import moon from "../assets/moon.png";
 
 const Header: React.FC = () => {
   const [mode, setMode] = useState("light");
@@ -37,17 +39,17 @@ const Header: React.FC = () => {
 
   return (
     <header className="header">
-      <div className="container">
-        <h1>Where in the world?</h1>
+      <div className="header-container container">
+        <h1 className="header-title">Where in the world?</h1>
         {mode === "dark" ? (
           <div className="header-toggle" onClick={() => onSelectMode("light")}>
-            <p>LIGHT</p>
-            {/* <img src={sun} alt="Soleil pour changer la couleur du thème" /> */}
+            <p className="header-toggle-text">Light Mode</p>
+            <img src={moon} alt="Pour changer la couleur du thème" />
           </div>
         ) : (
           <div className="header-toggle" onClick={() => onSelectMode("dark")}>
-            <p>DARK</p>
-            {/* <img src={moon} alt="Lune pour changer la couleur du thème" /> */}
+            <p className="header-toggle-text">Dark Mode</p>
+            <img src={emptyMoon} alt="Pour changer la couleur du thème" />
           </div>
         )}
       </div>

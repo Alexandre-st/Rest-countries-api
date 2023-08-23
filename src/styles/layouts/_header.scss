@@ -1,3 +1,28 @@
 .header {
   background-color: var(--background-header);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+
+  &-container {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 2rem;
+  }
+
+  &-toggle {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.8rem;
+    align-items: center;
+
+    &-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
 }
